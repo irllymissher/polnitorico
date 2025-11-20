@@ -15,6 +15,7 @@ int obtenerNumeroPosicion(char *posicion) {
     while (*posicion == ' ' || *posicion == '\t') { // Eliminar espacios iniciales
         posicion++;
     }
+	#laura
     for (int i = 0; i < 4; i++) {
         if (strcmp(posicion, posiciones[i]) == 0) {
             return numeros[i];
