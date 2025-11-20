@@ -3,7 +3,7 @@
 1) Especificacion de cada dato estadistico para que el cliente sepa si puede hacerlo con un tipo de dato u otro.
 
 ## IDEA 
-1)** Especificación de los datos (Ayuda al usuario)**
+1) **Especificación de los datos (Ayuda al usuario)**
    ```bash
       void mostrarLeyenda() {
        printf("\n--- LEYENDA DE DATOS REQUERIDOS ---\n");
@@ -17,7 +17,7 @@
 
 // En el main, llamas a esta función antes de pedir datos.
    ```
-2)** Mejora de Interfaz (Input en una sola línea)**
+2) **Mejora de Interfaz (Input en una sola línea)**
 ```
 printf("Introduce los 13 datos SEPARADOS POR ESPACIOS en este orden:\n");
 printf("[Goals Shots ShoPk PasTotCmp Assists CK PassBlocks ScaDrib Int CrdY CrdR Off Fls]\n");
@@ -39,7 +39,7 @@ if (Goals == -1) Goals = meanGoals;
 if (Shots == -1) Shots = meanShots;
 // ... etc
 ```
-3) ** Validación de Lógica (Tiros < Goles) **
+3) **Validación de Lógica (Tiros < Goles) **
 ```
 int datosValidos = 1; // Bandera para saber si todo está bien
 
@@ -67,3 +67,30 @@ if (datosValidos == 0) {
     return 1; // Salimos del programa
 }
 ``
+
+4) **Modularizacion**
+   * Crear una función separada (por ejemplo, procesarDatos) para manejar toda la lógica del while (fgets(...)).
+   * El main es demasiado largo. Dividirlo en funciones (main solo llama a cargarDatos, pedirInput, calcularKNN) mejora la legibilidad y la facilidad para encontrar errores.
+     
+5) **Función de Medias**
+   * Crear una función calcularMedias para calcular el promedio de todas las estadísticas en un solo bloque.
+   * Reduce la repetición de código (sumGoals/countGoals, sumShots/countShots, etc.) y lo hace más limpio.
+     
+6) **Hardcoding**
+   * Definir como constantes las columnas para futuras mejroas
+     
+7) **Gestión de Datos**
+   * Estructura de Jugador
+   * Definir una estructura struct Jugador que contenga todos los atributos normalizados y la posición.
+   * En lugar de manejar 13 colas separadas, manejas una sola cola de estructuras Jugador. Esto es más limpio y fácil de depurar, ya que la fila de datos siempre está unida a su posición.
+
+8) **PCA, Pesos ponderados**
+   ```
+   Lo que el programa pregunta y el resultado (printf)	Lo que el Usuario Escribe (scanf)
+   Introduce K (número de vecinos a considerar, impar y > 0):	3
+   	
+   --- ANÁLISIS KNN (K=3) ---	
+   Votos para FW (Delantero): 2 votos (Distancia Media: 0.25)	
+   Votos para MF (Medio): 1 voto (Distancia Media: 0.38)	
+   -> POSICIÓN PREDICHA: FW (Delantero)
+   ```
