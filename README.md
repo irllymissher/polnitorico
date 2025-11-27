@@ -98,3 +98,5 @@ if (datosValidos == 0) {
    Votos para MF (Medio): 1 voto (Distancia Media: 0.38)	
    -> POSICIÓN PREDICHA: FW (Delantero)
    ```
+
+   ```
