@@ -18,6 +18,7 @@
 // En el main, llamas a esta función antes de pedir datos.
    ```
 2) **Mejora de Interfaz (Input en una sola línea)**
+
 ```
 printf("Introduce los 13 datos SEPARADOS POR ESPACIOS en este orden:\n");
 printf("[Goals Shots ShoPk PasTotCmp Assists CK PassBlocks ScaDrib Int CrdY CrdR Off Fls]\n");
@@ -39,6 +40,7 @@ if (Goals == -1) Goals = meanGoals;
 if (Shots == -1) Shots = meanShots;
 // ... etc
 ```
+
 3) **Validación de Lógica (Tiros < Goles) **
 ```
 int datosValidos = 1; // Bandera para saber si todo está bien
