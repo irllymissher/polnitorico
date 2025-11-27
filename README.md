@@ -14,9 +14,10 @@
        // ... y así con el resto ...
        printf("-----------------------------------\n\n");
       }
-
-// En el main, llamas a esta función antes de pedir datos.
+      // En el main, llamas a esta función antes de pedir datos.
    ```
+
+
 2) **Mejora de Interfaz (Input en una sola línea)**
 
 ```
@@ -41,7 +42,8 @@ if (Shots == -1) Shots = meanShots;
 // ... etc
 ```
 
-3) **Validación de Lógica (Tiros < Goles) **
+3) **Validación de Lógica (Tiros < Goles)**
+   
 ```
 int datosValidos = 1; // Bandera para saber si todo está bien
 
@@ -68,7 +70,7 @@ if (datosValidos == 0) {
     printf("Por favor, reinicia el programa e introduce datos coherentes.\n");
     return 1; // Salimos del programa
 }
-``
+```
 
 4) **Modularizacion**
    * Crear una función separada (por ejemplo, procesarDatos) para manejar toda la lógica del while (fgets(...)).
