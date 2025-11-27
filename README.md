@@ -2,7 +2,7 @@
 
 1) Especificacion de cada dato estadistico para que el cliente sepa si puede hacerlo con un tipo de dato u otro.
 
-## IDEA 
+## IDEA : 
 1) **Especificación de los datos (Ayuda al usuario)**
    ```bash
       void mostrarLeyenda() {
